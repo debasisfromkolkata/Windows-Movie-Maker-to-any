@@ -1,0 +1,37 @@
+
+ffmpeg -i "C:\share\avi\crm\crm1.avi" -vcodec copy -acodec copy -ss 2.0580272000000015 -t 24.862199499999996 "C:\share\avi\crm\crm1.avi_6_0_5.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 21.649061266983701 -t 52.21689860928479 "C:\share\avi\crm\crm.avi_9_0_9.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 161.08513380954645 -t 16.955756153646462 "C:\share\avi\crm\crm.avi_21_0_3.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 189.18012059974643 -t 0.05727996666718127 "C:\share\avi\crm\crm.avi_24_0_7.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 209.97704344882007 -t 38.27975604581772 "C:\share\avi\crm\crm.avi_29_0_10.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 201.96535966641321 -t 2.2990013785969268 "C:\share\avi\crm\crm.avi_30_0_11.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 249.60589349463774 -t 10.251104948889349 "C:\share\avi\crm\crm.avi_32_0_12.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 277.27423294352712 -t 2.012449966666793 "C:\share\avi\crm\crm.avi_34_0_0.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 283.57911021019402 -t 1.7859752662920982 "C:\share\avi\crm\crm.avi_36_0_1.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 290.56420217648622 -t 0.6300801670424789 "C:\share\avi\crm\crm.avi_38_0_2.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 300.18444204352875 -t 48.1868264000002 "C:\share\avi\crm\crm.avi_40_0_4.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 348.37126844352895 -t 26.035143060110386 "C:\share\avi\crm\crm.avi_41_0_6.avi"
+ffmpeg -i "C:\share\avi\crm\crm.avi" -vcodec copy -acodec copy -ss 386.19235350363954 -t 9.014683780802159 "C:\share\avi\crm\crm.avi_43_0_8.avi"
+
+
+file 'C:\share\avi\crm\crm1.avi_6_0_5.avi'
+file 'C:\share\avi\crm\crm.avi_9_0_9.avi'
+file 'C:\share\avi\crm\crm.avi_21_0_3.avi'
+file 'C:\share\avi\crm\crm.avi_24_0_7.avi'
+file 'C:\share\avi\crm\crm.avi_29_0_10.avi'
+file 'C:\share\avi\crm\crm.avi_30_0_11.avi'
+file 'C:\share\avi\crm\crm.avi_32_0_12.avi'
+file 'C:\share\avi\crm\crm.avi_34_0_0.avi'
+file 'C:\share\avi\crm\crm.avi_36_0_1.avi'
+file 'C:\share\avi\crm\crm.avi_38_0_2.avi'
+file 'C:\share\avi\crm\crm.avi_40_0_4.avi'
+file 'C:\share\avi\crm\crm.avi_41_0_6.avi'
+file 'C:\share\avi\crm\crm.avi_43_0_8.avi'
+
+
+ffmpeg -f concat -i "C:\share\avi\crm\list.txt" -c copy "C:\share\avi\crm\final_cont.avi"
+
+ffmpeg -i "C:\share\avi\crm\final_cont.avi" -filter:v "crop=1364:738:0:0" -qscale 4     "C:\share\avi\crm\final_cont_crop.avi"
+
+
+ffmpeg -i "C:\share\avi\crm\final_cont_crop.avi" -qscale 4 -s 600x321 "C:\share\avi\crm\final_cont.flv"
